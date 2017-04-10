@@ -1,5 +1,9 @@
 package main
 
+// dinopass.go
+// Generates a password based on DinoPass
+// Ron Egli - github/smugzombie
+
 import (
         "io/ioutil"
         "log"
