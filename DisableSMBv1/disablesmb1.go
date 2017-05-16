@@ -1,7 +1,7 @@
 // SMB1Disabler.exe
 // Disabled SMB1 on Windows Machines
-// Author: Ron Egli - github.com/smugzombie
-// Version 0.2
+// Author: Ron Egli - ron.egli@tvrms.com
+// Version 0.3
 
 package main
 
@@ -28,7 +28,7 @@ func Throw(up Exception) {
 
 func main(){
 	checkIfAdmin()
-
+	fmt.Println("SMBv1 Status: Loading....")
 	out, err := exec.Command("PowerShell", "-Command", "Get-WindowsOptionalFeature -Online -FeatureName smb1protocol | Select State").Output()
     if err != nil {
         log.Fatal(err)
